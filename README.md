@@ -3,9 +3,9 @@
 Welcome to my personal developer portfolio website!  
 This is a terminal-style portfolio designed to reflect my love for software, AI, and tech minimalism.
 
-## 🚀 Live Preview
+## 🚀 Live Portfolio
 
-**👉 [Check it out here]([(https://my-portfolio-seven-bice-16.vercel.app/)]) 👈**  
+🔗 [Visit My Portfolio](https://my-portfolio-seven-bice-16.vercel.app)
 
 
 ---
