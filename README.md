@@ -5,7 +5,7 @@ This is a terminal-style portfolio designed to reflect my love for software, AI,
 
 ## 🚀 Live Portfolio
 
-🔗 [Visit My Portfolio](https://my-portfolio-seven-bice-16.vercel.app)
+🔗 [Visit My Portfolio](https://dhakshin-portfolio.vercel.app)
 
 
 ---
