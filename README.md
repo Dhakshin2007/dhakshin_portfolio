@@ -5,8 +5,8 @@ This is a terminal-style portfolio designed to reflect my love for software, AI,
 
 ## 🚀 Live Preview
 
-**👉 [Check it out here](https://blepay.vercel.app) 👈**  
-(Final link will be updated once deployed on Vercel)
+**👉 [Check it out here]((https://my-portfolio-seven-bice-16.vercel.app/)) 👈**  
+
 
 ---
 
