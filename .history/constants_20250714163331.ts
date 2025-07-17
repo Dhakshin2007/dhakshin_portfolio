@@ -32,8 +32,8 @@ export const projects: Project[] = [
         description: 'Designed and redacted visual content for the Telugu Culture Association at IIT Ropar, enhancing public engagement through creative graphics using Canva.',
         image: 'https://picsum.photos/seed/tca/600/400',
         tags: ['Canva', 'Graphic Design', 'Public Relations'],
-        liveUrl: 'https://tcaiitrpr.vercel.app/',
-        codeUrl: 'https://github.com/Dhakshin2007/tca_website/tree/main',
+        liveUrl: '#',
+        codeUrl: '#',
     },
     {
         title: 'AI Prompt Engineering Showcase',

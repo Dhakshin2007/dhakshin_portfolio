@@ -33,7 +33,7 @@ export const projects: Project[] = [
         image: 'https://picsum.photos/seed/tca/600/400',
         tags: ['Canva', 'Graphic Design', 'Public Relations'],
         liveUrl: 'https://tcaiitrpr.vercel.app/',
-        codeUrl: 'https://github.com/Dhakshin2007/tca_website/tree/main',
+        codeUrl: '#',
     },
     {
         title: 'AI Prompt Engineering Showcase',
