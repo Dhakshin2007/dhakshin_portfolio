@@ -13,6 +13,7 @@ import { Project } from './types';
 import { GitHubIcon, LinkedInIcon, MailIcon, LinkIcon, CodeIcon, CloseIcon, LinktreeIcon } from './components/IconComponents';
 import { MeteorBackground } from './components/MeteorBackground';
 import { CelestialBackground } from './components/CelestialBackground';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 
 function App() {

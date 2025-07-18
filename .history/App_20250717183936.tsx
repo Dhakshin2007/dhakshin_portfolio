@@ -13,16 +13,17 @@ import { Project } from './types';
 import { GitHubIcon, LinkedInIcon, MailIcon, LinkIcon, CodeIcon, CloseIcon, LinktreeIcon } from './components/IconComponents';
 import { MeteorBackground } from './components/MeteorBackground';
 import { CelestialBackground } from './components/CelestialBackground';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 
-function App() {
+const App: React.FC = () => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
     const roles = ['AI & DE Student', 'Aspiring Software Architect', 'Tech Enthusiast'];
     const typewriterText = useTypewriter(roles, 150, 100, 2000);
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
     const mainContainerRef = useRef<HTMLDivElement>(null);
-
+    
     useEffect(() => {
         if (selectedProject) {
             document.body.style.overflow = 'hidden';
@@ -49,10 +50,10 @@ function App() {
     };
 
 
-    const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => void; }) => (
+    const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => void }) => (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4" onClick={onClose}>
             <div className="glass-panel rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto p-6 md:p-8 relative transition-all duration-300 transform scale-95 animate-scale-in"
-                onClick={(e) => e.stopPropagation()}>
+                 onClick={(e) => e.stopPropagation()}>
                 <button onClick={onClose} className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors z-10">
                     <CloseIcon />
                 </button>
@@ -103,7 +104,7 @@ function App() {
                             <span className="cyan-glow">Dhakshin Kotha</span>
                         </h1>
                         <p className="mt-4 text-xl md:text-2xl lg:text-3xl text-gray-300">
-                            An <span className="font-bold text-white magenta-glow">{typewriterText}</span>
+                           An <span className="font-bold text-white magenta-glow">{typewriterText}</span>
                             <span className="inline-block w-1 h-8 bg-cyan-400 animate-pulse ml-1"></span>
                         </p>
                     </div>
@@ -113,9 +114,9 @@ function App() {
                 <Section id="about">
                     <h2 className="text-4xl font-bold font-orbitron text-center mb-12 cyan-glow">About Me</h2>
                     <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
-                        <img src={profileImage} alt="Dhakshin Kotha" className="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover shadow-2xl shadow-magenta-500/20 border-4 border-magenta-500/50" />
+                        <img src={profileImage} alt="Dhakshin Kotha" className="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover shadow-2xl shadow-magenta-500/20 border-4 border-magenta-500/50"/>
                         <p className="text-lg text-gray-300 leading-relaxed text-center md:text-left">
-                            I'm an undergraduate at IIT Ropar, pursuing a BTech in Artificial Intelligence and Data Engineering. I have a strong foundation in C and a growing passion for blending technology with creativity—especially through software architecture, AI, and tech exploration. I thrive on solving real-world problems and collaborating with people who take initiative.
+                           I'm an undergraduate at IIT Ropar, pursuing a BTech in Artificial Intelligence and Data Engineering. I have a strong foundation in C and a growing passion for blending technology with creativity—especially through software architecture, AI, and tech exploration. I thrive on solving real-world problems and collaborating with people who take initiative.
                         </p>
                     </div>
                     <div className="mt-16">
@@ -129,7 +130,7 @@ function App() {
                         </div>
                     </div>
                 </Section>
-
+                
                 {/* Education Section */}
                 <Section id="education">
                     <h2 className="text-4xl font-bold font-orbitron text-center mb-16 cyan-glow">Education</h2>
@@ -142,7 +143,7 @@ function App() {
                         </div>
                     </div>
                 </Section>
-
+                
                 {/* Experience Section */}
                 <Section id="experience">
                     <h2 className="text-4xl font-bold font-orbitron text-center mb-16 magenta-glow">Experience</h2>
@@ -169,7 +170,7 @@ function App() {
                 {/* Extras Section */}
                 <Section id="extras">
                     <h2 className="text-4xl font-bold font-orbitron text-center mb-12 cyan-glow">Extras</h2>
-
+                    
                     <div className="mb-20">
                         <h3 className="text-3xl font-bold font-orbitron text-center mb-12 magenta-glow">Certifications</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
@@ -178,9 +179,9 @@ function App() {
                             ))}
                         </div>
                     </div>
-
+                    
                     <div>
-                        <h3 className="text-3xl font-bold font-orbitron text-center mb-12 cyan-glow">Languages</h3>
+                         <h3 className="text-3xl font-bold font-orbitron text-center mb-12 cyan-glow">Languages</h3>
                         <div className="max-w-2xl mx-auto space-y-6">
                             {languages.map((lang) => {
                                 const getProficiencyWidth = (proficiency: string) => {
@@ -210,33 +211,33 @@ function App() {
 
                 {/* Contact Section */}
                 <Section id="contact">
-                    <h2 className="text-4xl font-bold font-orbitron text-center mb-12 cyan-glow">Get In Touch</h2>
-                    <div className="max-w-2xl mx-auto glass-panel p-8 rounded-2xl">
-                        <form className="space-y-6" onSubmit={handleFormSubmit}>
-                            <input type="text" name="name" value={formData.name} onChange={handleFormChange} placeholder="Your Name" className="w-full bg-transparent border-b-2 border-gray-500 focus:border-cyan-400 outline-none p-3 transition-colors text-lg" required />
-                            <input type="email" name="email" value={formData.email} onChange={handleFormChange} placeholder="Your Email" className="w-full bg-transparent border-b-2 border-gray-500 focus:border-cyan-400 outline-none p-3 transition-colors text-lg" required />
-                            <textarea name="message" value={formData.message} onChange={handleFormChange} placeholder="Your Message" rows={4} className="w-full bg-transparent border-b-2 border-gray-500 focus:border-cyan-400 outline-none p-3 transition-colors text-lg" required></textarea>
-                            <button type="submit" className="w-full font-orbitron font-bold py-3 px-6 bg-gradient-to-r from-cyan-500 to-magenta-500 rounded-lg text-white hover:opacity-90 transition-opacity transform hover:scale-105">
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
+                     <h2 className="text-4xl font-bold font-orbitron text-center mb-12 cyan-glow">Get In Touch</h2>
+                     <div className="max-w-2xl mx-auto glass-panel p-8 rounded-2xl">
+                         <form className="space-y-6" onSubmit={handleFormSubmit}>
+                             <input type="text" name="name" value={formData.name} onChange={handleFormChange} placeholder="Your Name" className="w-full bg-transparent border-b-2 border-gray-500 focus:border-cyan-400 outline-none p-3 transition-colors text-lg" required />
+                             <input type="email" name="email" value={formData.email} onChange={handleFormChange} placeholder="Your Email" className="w-full bg-transparent border-b-2 border-gray-500 focus:border-cyan-400 outline-none p-3 transition-colors text-lg" required />
+                             <textarea name="message" value={formData.message} onChange={handleFormChange} placeholder="Your Message" rows={4} className="w-full bg-transparent border-b-2 border-gray-500 focus:border-cyan-400 outline-none p-3 transition-colors text-lg" required></textarea>
+                             <button type="submit" className="w-full font-orbitron font-bold py-3 px-6 bg-gradient-to-r from-cyan-500 to-magenta-500 rounded-lg text-white hover:opacity-90 transition-opacity transform hover:scale-105">
+                                 Send Message
+                             </button>
+                         </form>
+                     </div>
                 </Section>
             </main>
-
+            
             <footer className="relative py-12 px-4 text-center overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500/50 via-magenta-500/50 to-indigo-500/50 animate-pulse"></div>
-                <div className="flex justify-center gap-6 mb-4">
+                 <div className="flex justify-center gap-6 mb-4">
                     <a href="https://github.com/Dhakshin2007" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125"><GitHubIcon /></a>
                     <a href="https://linkedin.com/in/dhakshinkotha" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125"><LinkedInIcon /></a>
                     <a href="mailto:dhakshinkotha2007@gmail.com" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125"><MailIcon /></a>
                     <a
-                        href="https://linktr.ee/dhakshinkotha"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125"
+                      href="https://linktr.ee/dhakshinkotha"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125"
                     >
-                        <LinktreeIcon />
+                      <LinktreeIcon />
                     </a>
                 </div>
                 <p className="text-gray-500">&copy; {new Date().getFullYear()} Dhakshin Kotha. All rights reserved.</p>
@@ -245,6 +246,6 @@ function App() {
             {selectedProject && <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />}
         </div>
     );
-}
+};
 
 export default App;
