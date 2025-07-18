@@ -1,0 +1,21 @@
+{
+  "name": "Dhakshin Kotha - Portfolio",
+  "short_name": "Dhakshin",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D0D0D",
+  "theme_color": "#00FFFF",
+  "description": "Personal portfolio of Dhakshin Kotha, AI and Software Architecture enthusiast.",
+  "icons": [
+    {
+      "src": "/Dk.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/Dk.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
