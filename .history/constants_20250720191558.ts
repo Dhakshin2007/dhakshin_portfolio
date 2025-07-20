@@ -52,12 +52,12 @@ export const projects: Project[] = [
         codeUrl: 'https://github.com/Dhakshin2007/entry_system',
     },
     {
-        title: 'AI Women Safety Web Service',
-        description: 'A web service that uses AI to enhance women safety by providing real-time alerts and location tracking, ensuring a secure environment.',
-        image: '/aiwm.120Z.png',
-        tags: ['Java Script', 'Html', 'CSS' , 'Safety System'],
-        liveUrl: 'https://www.linkedin.com/posts/dhakshinkotha_aiforgood-womensafety-hackforchange-activity-7341751189216075777-e-iq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFVUKLoBsAeJw5dsDyd1maoE5UhEk2xPf7M',
-        codeUrl: '#',
+        title: 'College Entry and Exit System',
+        description: 'A web application designed to streamline the process of recording student entry and exit times at college, enhancing campus security and attendance tracking.',
+        image: 'https://www.iitms.co.in/rfid-based-attendance-system/img/Biometric-Attendance-System-Application-banner.png',
+        tags: ['Java Script', 'Html', 'CSS' , 'Entry System'],
+        liveUrl: 'https://college-entry-system.onrender.com',
+        codeUrl: 'https://github.com/Dhakshin2007/entry_system',
     },
 ];
 

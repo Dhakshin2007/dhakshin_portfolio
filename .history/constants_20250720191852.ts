@@ -57,7 +57,7 @@ export const projects: Project[] = [
         image: '/aiwm.120Z.png',
         tags: ['Java Script', 'Html', 'CSS' , 'Safety System'],
         liveUrl: 'https://www.linkedin.com/posts/dhakshinkotha_aiforgood-womensafety-hackforchange-activity-7341751189216075777-e-iq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFVUKLoBsAeJw5dsDyd1maoE5UhEk2xPf7M',
-        codeUrl: '#',
+        codeUrl: 'https://github.com/Dhakshin2007/entry_system',
     },
 ];
 
