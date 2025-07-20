@@ -28,10 +28,10 @@ export const projects: Project[] = [
         codeUrl: 'https://github.com/Dhakshin2007/Tapless_Pay',
     },
     {
-        title: 'TCA Website',
-        description: 'Designed and redacted visual content for the Telugu Culture Association at IIT Ropar, enhancing public engagement through creative graphics using Canva. Website showcases the association\'s activities and events.',
+        title: 'TCA Visual Content',
+        description: 'Designed and redacted visual content for the Telugu Culture Association at IIT Ropar, enhancing public engagement through creative graphics using Canva.',
         image: 'https://picsum.photos/seed/tca/600/400',
-        tags: ['Canva', 'Graphic Design', 'Public Relations' , 'IIT Ropar' , 'WebDevelopment'],
+        tags: ['Canva', 'Graphic Design', 'Public Relations' , 'IIT Ropar' , ],
         liveUrl: 'https://tcaiitrpr.vercel.app/',
         codeUrl: 'https://github.com/Dhakshin2007/tca_website/tree/main',
     },
@@ -41,15 +41,7 @@ export const projects: Project[] = [
         image: 'https://picsum.photos/seed/prompt/600/400',
         tags: ['Java Script', 'Html', 'CSS' , 'Extension'],
         liveUrl: '#',
-        codeUrl: 'https://github.com/Dhakshin2007/wsuplock/tree/main',
-    },
-    {
-        title: 'College Entry and Exit System',
-        description: 'A web application designed to streamline the process of recording student entry and exit times at college, enhancing campus security and attendance tracking.',
-        image: 'https://www.iitms.co.in/rfid-based-attendance-system/img/Biometric-Attendance-System-Application-banner.png',
-        tags: ['Java Script', 'Html', 'CSS' , 'Entry System'],
-        liveUrl: '#',
-        codeUrl: 'https://github.com/Dhakshin2007/entry_system',
+        codeUrl: '#',
     },
 ];
 

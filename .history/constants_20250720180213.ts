@@ -43,14 +43,6 @@ export const projects: Project[] = [
         liveUrl: '#',
         codeUrl: 'https://github.com/Dhakshin2007/wsuplock/tree/main',
     },
-    {
-        title: 'College Entry and Exit System',
-        description: 'A web application designed to streamline the process of recording student entry and exit times at college, enhancing campus security and attendance tracking.',
-        image: 'https://www.iitms.co.in/rfid-based-attendance-system/img/Biometric-Attendance-System-Application-banner.png',
-        tags: ['Java Script', 'Html', 'CSS' , 'Entry System'],
-        liveUrl: '#',
-        codeUrl: 'https://github.com/Dhakshin2007/entry_system',
-    },
 ];
 
 export const education: Experience[] = [

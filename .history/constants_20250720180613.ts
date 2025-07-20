@@ -49,7 +49,7 @@ export const projects: Project[] = [
         image: 'https://www.iitms.co.in/rfid-based-attendance-system/img/Biometric-Attendance-System-Application-banner.png',
         tags: ['Java Script', 'Html', 'CSS' , 'Entry System'],
         liveUrl: '#',
-        codeUrl: 'https://github.com/Dhakshin2007/entry_system',
+        codeUrl: 'https://github.com/Dhakshin2007/wsuplock/tree/main',
     },
 ];
 
