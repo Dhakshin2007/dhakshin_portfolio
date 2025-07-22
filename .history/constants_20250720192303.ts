@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Project, Experience, NavLink, Language, Certification } from './types';
-import { BriefcaseIcon, GraduationCapIcon, HPLifeLogo, GoogleCloudLogo, TcsIonLogo, AWSLogo } from './components/IconComponents';
+import { BriefcaseIcon, GraduationCapIcon, HPLifeLogo, GoogleCloudLogo, TcsIonLogo } from './components/IconComponents';
 
 export const navLinks: NavLink[] = [
     { id: 'home', title: 'Home' },
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     {
         title: 'AI Women Safety Web Service',
         description: 'A web service that uses AI to enhance women safety by providing real-time alerts and location tracking, ensuring a secure environment.',
-        image: 'https://open-ai.sgp1.digitaloceanspaces.com/blogs/ai-s-next-frontier-a-safer-world-for-women.webp',
+        image: 'https://drive.google.com/file/d/1q-Zy8Y6VL4CAKeBUIgVZznohPy-Dcuy2/view?usp=sharing',
         tags: ['Java Script', 'Html', 'CSS' , 'Safety System'],
         liveUrl: 'https://www.linkedin.com/posts/dhakshinkotha_aiforgood-womensafety-hackforchange-activity-7341751189216075777-e-iq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFVUKLoBsAeJw5dsDyd1maoE5UhEk2xPf7M',
         codeUrl: '#',
@@ -149,14 +149,5 @@ export const certifications: Certification[] = [
         description: 'Developed key professional soft skills including communication, teamwork, and public speaking. Credential ID: 119854-27523403-1016.',
         skills: ['Soft Skills', 'Public Speaking'],
         logo: React.createElement(TcsIonLogo),
-    },
-    {
-        title: 'Solution Architecture',
-        issuer: 'Amazon Web Sevices(AWS)',
-        date: 'Issued July 2025',
-        credentialUrl: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_rLX2boarfdpzGPWu3_1753160372622_completion_certificate.pdf',
-        description: 'This course provided a comprehensive understanding of solution architecture principles, focusing on designing scalable and efficient systems using AWS services.',
-        skills: ['Solution Architecture', 'Client Handling'],
-        logo: React.createElement(AWSLogo), // Assuming you have an AmazonWebServicesLogo component
-    },
+    }
 ];

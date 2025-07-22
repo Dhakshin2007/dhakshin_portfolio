@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Project, Experience, NavLink, Language, Certification } from './types';
-import { BriefcaseIcon, GraduationCapIcon, HPLifeLogo, GoogleCloudLogo, TcsIonLogo, AWSLogo } from './components/IconComponents';
+import { BriefcaseIcon, GraduationCapIcon, HPLifeLogo, GoogleCloudLogo, TcsIonLogo, , AWSLogo } from './components/IconComponents';
 
 export const navLinks: NavLink[] = [
     { id: 'home', title: 'Home' },
@@ -149,7 +149,7 @@ export const certifications: Certification[] = [
         description: 'Developed key professional soft skills including communication, teamwork, and public speaking. Credential ID: 119854-27523403-1016.',
         skills: ['Soft Skills', 'Public Speaking'],
         logo: React.createElement(TcsIonLogo),
-    },
+    }
     {
         title: 'Solution Architecture',
         issuer: 'Amazon Web Sevices(AWS)',

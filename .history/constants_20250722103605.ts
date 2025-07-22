@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Project, Experience, NavLink, Language, Certification } from './types';
-import { BriefcaseIcon, GraduationCapIcon, HPLifeLogo, GoogleCloudLogo, TcsIonLogo, AWSLogo } from './components/IconComponents';
+import { BriefcaseIcon, GraduationCapIcon, HPLifeLogo, GoogleCloudLogo, TcsIonLogo } from './components/IconComponents';
 
 export const navLinks: NavLink[] = [
     { id: 'home', title: 'Home' },
@@ -149,14 +149,14 @@ export const certifications: Certification[] = [
         description: 'Developed key professional soft skills including communication, teamwork, and public speaking. Credential ID: 119854-27523403-1016.',
         skills: ['Soft Skills', 'Public Speaking'],
         logo: React.createElement(TcsIonLogo),
-    },
+    }
     {
         title: 'Solution Architecture',
         issuer: 'Amazon Web Sevices(AWS)',
         date: 'Issued July 2025',
-        credentialUrl: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_rLX2boarfdpzGPWu3_1753160372622_completion_certificate.pdf',
-        description: 'This course provided a comprehensive understanding of solution architecture principles, focusing on designing scalable and efficient systems using AWS services.',
-        skills: ['Solution Architecture', 'Client Handling'],
-        logo: React.createElement(AWSLogo), // Assuming you have an AmazonWebServicesLogo component
+        credentialUrl: 'https://www.credly.com/badges/71e37d9b-84f3-4edf-8c08-5963f77931fe/public_url',
+        description: 'This course equipped me with knowledge for designing prompts that produce meaningful AI outcomes and helps make use of its potential towards delivering innovative content creation.',
+        skills: ['Prompt Design', 'AI'],
+        logo: React.createElement(GoogleCloudLogo),
     },
 ];

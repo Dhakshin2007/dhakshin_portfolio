@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Project, Experience, NavLink, Language, Certification } from './types';
-import { BriefcaseIcon, GraduationCapIcon, HPLifeLogo, GoogleCloudLogo, TcsIonLogo, AWSLogo } from './components/IconComponents';
+import { BriefcaseIcon, GraduationCapIcon, HPLifeLogo, GoogleCloudLogo, TcsIonLogo, AmazonWebServicesLogo } from './components/IconComponents';
 
 export const navLinks: NavLink[] = [
     { id: 'home', title: 'Home' },
@@ -149,7 +149,7 @@ export const certifications: Certification[] = [
         description: 'Developed key professional soft skills including communication, teamwork, and public speaking. Credential ID: 119854-27523403-1016.',
         skills: ['Soft Skills', 'Public Speaking'],
         logo: React.createElement(TcsIonLogo),
-    },
+    }
     {
         title: 'Solution Architecture',
         issuer: 'Amazon Web Sevices(AWS)',
@@ -157,6 +157,6 @@ export const certifications: Certification[] = [
         credentialUrl: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_rLX2boarfdpzGPWu3_1753160372622_completion_certificate.pdf',
         description: 'This course provided a comprehensive understanding of solution architecture principles, focusing on designing scalable and efficient systems using AWS services.',
         skills: ['Solution Architecture', 'Client Handling'],
-        logo: React.createElement(AWSLogo), // Assuming you have an AmazonWebServicesLogo component
+        logo: React.createElement(AmazonWebServicesLogo), // Assuming you have an AmazonWebServicesLogo component
     },
 ];
