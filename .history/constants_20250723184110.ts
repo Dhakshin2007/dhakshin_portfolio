@@ -15,7 +15,7 @@ export const navLinks: NavLink[] = [
 
 export const skills: string[] = [
     'C', 'AI & Data Engineering', 'Software Architecture', 'Firebase', 'Canva', 
-    'Google AI', 'Prompt Design', 'Public Speaking', 'Git & GitHub' , 'Python' ,'Tyepscript'
+    'Google AI', 'Prompt Design', 'Public Speaking', 'Git & GitHub' , 'Python'
 ];
 
 export const projects: Project[] = [

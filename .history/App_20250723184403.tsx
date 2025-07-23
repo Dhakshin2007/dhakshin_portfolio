@@ -17,9 +17,7 @@ import { CelestialBackground } from './components/CelestialBackground';
 
 function App() {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-    // Increase speed by reducing typeDelay and deleteDelay values
     const roles = ['AI & DE Student', 'Software Architect', 'Techie', 'Creative Coder'];
-    // Example: typeDelay=70ms, deleteDelay=40ms, pauseDelay=1200ms
     const typewriterText = useTypewriter(roles, 150, 100, 2000);
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
@@ -91,7 +89,7 @@ function App() {
 
             <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10">
                 <Blob styles="absolute top-0 -left-1/4 w-1/2 h-1/2 bg-magenta-500/30 rounded-full filter blur-3xl opacity-50 animate-blob" />
-                <Blob styles="absolute top-0 -right-1/4 w-1/2 h-1/2 bg-cyan-500/30 rounded-full filter blur-3xl opacity-50 animate-blob animation-delay-4000" />
+                <Blob styles="absolute top-0 -right-1/4 w-1/2 h-1/2 bg-cyan-500/30 rounded-full filter blur-3xl opacity-50 animate-blob animation-delay-2000" />
                 <Blob styles="absolute bottom-0 left-1/4 w-1/2 h-1/2 bg-indigo-500/30 rounded-full filter blur-3xl opacity-50 animate-blob animation-delay-4000" />
             </div>
 

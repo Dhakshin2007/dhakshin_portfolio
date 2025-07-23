@@ -15,7 +15,7 @@ export const navLinks: NavLink[] = [
 
 export const skills: string[] = [
     'C', 'AI & Data Engineering', 'Software Architecture', 'Firebase', 'Canva', 
-    'Google AI', 'Prompt Design', 'Public Speaking', 'Git & GitHub' , 'Python' ,'Tyepscript'
+    'Google AI', 'Prompt Design', 'Public Speaking', 'Git & GitHub'
 ];
 
 export const projects: Project[] = [
@@ -60,13 +60,8 @@ export const projects: Project[] = [
         codeUrl: '#',
     },
     {
-        title: 'English Programming Language',
-        description: 'It is a simple programming language which is written in Python, it is a simple compiler which takes the input from the user in English Syntax and gives the output.',
-        image: 'https://images.inc.com/uploaded_files/image/1920x1080/getty_177809840_65441.jpg',
-        tags: ['Python', 'Programming Language', 'Compiler'],
-        liveUrl: 'https://github.com/Dhakshin2007/eng_lang',
-        codeUrl: 'https://github.com/Dhakshin2007/eng_lang',
-    },
+        title
+    }
 ];
 
 export const education: Experience[] = [
