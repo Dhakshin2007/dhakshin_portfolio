@@ -14,8 +14,7 @@ import { Project } from './types';
 import { GitHubIcon, LinkedInIcon, MailIcon, LinkIcon, CodeIcon, CloseIcon } from './components/IconComponents';
 import { MeteorBackground } from './components/MeteorBackground';
 import { CelestialBackground } from './components/CelestialBackground';
-import { LinktreeIcon } from './components/IconComponents';
-
+import { MatrixRain } from './components/MatrixRain';
 
 const App: React.FC = () => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -113,21 +112,24 @@ const App: React.FC = () => {
 
                 {/* About Section */}
                 <Section id="about">
-                    <h2 className="text-4xl font-bold font-orbitron text-center mb-12 cyan-glow">About Me</h2>
-                    <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
-                        <img src={profileImage} alt="Dhakshin Kotha" className="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover shadow-2xl shadow-magenta-500/20 border-4 border-magenta-500/50"/>
-                        <p className="text-lg text-gray-300 leading-relaxed text-center md:text-left">
-                           I'm an undergraduate at IIT Ropar, pursuing a BTech in Artificial Intelligence and Data Engineering. I have a strong foundation in C and a growing passion for blending technology with creativity—especially through software architecture, AI, and tech exploration. I thrive on solving real-world problems and collaborating with people who take initiative.
-                        </p>
-                    </div>
-                    <div className="mt-16">
-                        <h3 className="text-3xl font-bold font-orbitron text-center mb-8 magenta-glow">Core Skills</h3>
-                        <div className="flex flex-wrap justify-center gap-4">
-                            {skills.map(skill => (
-                                <div key={skill} className="glass-panel px-4 py-2 rounded-lg text-lg hover:bg-cyan-400/20 hover:text-cyan-300 transition-all cursor-pointer">
-                                    {skill}
-                                </div>
-                            ))}
+                    <MatrixRain />
+                    <div className="relative z-10">
+                        <h2 className="text-4xl font-bold font-orbitron text-center mb-12 cyan-glow">About Me</h2>
+                        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
+                            <img src={profileImage} alt="Dhakshin Kotha" className="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover shadow-2xl shadow-magenta-500/20 border-4 border-magenta-500/50"/>
+                            <p className="text-lg text-gray-300 leading-relaxed text-center md:text-left">
+                               I'm an undergraduate at IIT Ropar, pursuing a BTech in Artificial Intelligence and Data Engineering. I have a strong foundation in C and a growing passion for blending technology with creativity—especially through software architecture, AI, and tech exploration. I thrive on solving real-world problems and collaborating with people who take initiative.
+                            </p>
+                        </div>
+                        <div className="mt-16">
+                            <h3 className="text-3xl font-bold font-orbitron text-center mb-8 magenta-glow">Core Skills</h3>
+                            <div className="flex flex-wrap justify-center gap-4">
+                                {skills.map(skill => (
+                                    <div key={skill} className="glass-panel px-4 py-2 rounded-lg text-lg hover:bg-cyan-400/20 hover:text-cyan-300 transition-all cursor-pointer">
+                                        {skill}
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </Section>
@@ -239,6 +241,23 @@ const App: React.FC = () => {
             {selectedProject && <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />}
         </div>
     );
-};
+/**
+ * To make the profile picture perfectly circular, ensure the width and height are equal and use `rounded-full`.
+ * In your About Me section, update the image className as follows:
+ * 
+ * Replace:
+ * className="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover shadow-2xl shadow-magenta-500/20 border-4 border-magenta-500/50"
+ * 
+ * If you want to be extra sure, you can use aspect-square to enforce a 1:1 aspect ratio:
+ * className="w-48 h-48 md:w-60 md:h-60 aspect-square rounded-full object-cover shadow-2xl shadow-magenta-500/20 border-4 border-magenta-500/50"
+ * 
+ * Here's the updated code for the About Me image:
+ */
+
+<img
+    src={profileImage}
+    alt="Dhakshin Kotha"
+    className="w-48 h-48 md:w-60 md:h-60 aspect-square rounded-full object-cover shadow-2xl shadow-magenta-500/20 border-4 border-magenta-500/50"
+/>
 
 export default App;

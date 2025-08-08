@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Header } from './components/Header';
 import { AnimatedCursor } from './components/AnimatedCursor';
@@ -10,21 +11,19 @@ import { useTypewriter } from './hooks/useTypewriter';
 import { projects, education, experience, languages, navLinks, skills, certifications } from './constants';
 import { profileImage } from './assets/profile';
 import { Project } from './types';
-import { GitHubIcon, LinkedInIcon, MailIcon, LinkIcon, CodeIcon, CloseIcon, LinktreeIcon } from './components/IconComponents';
+import { GitHubIcon, LinkedInIcon, MailIcon, LinkIcon, CodeIcon, CloseIcon } from './components/IconComponents';
 import { MeteorBackground } from './components/MeteorBackground';
 import { CelestialBackground } from './components/CelestialBackground';
+import { MatrixRain } from './components/MatrixRain';
 
-
-function App() {
+const App: React.FC = () => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-    // Increase speed by reducing typeDelay and deleteDelay values
-    const roles = ['AI & DE Student', 'Software Architect', 'Techie', 'Creative Coder'];
-    // Example: typeDelay=70ms, deleteDelay=40ms, pauseDelay=1200ms
+    const roles = ['AI & DE Student', 'Aspiring Software Architect', 'Tech Enthusiast'];
     const typewriterText = useTypewriter(roles, 150, 100, 2000);
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
     const mainContainerRef = useRef<HTMLDivElement>(null);
-
+    
     useEffect(() => {
         if (selectedProject) {
             document.body.style.overflow = 'hidden';
@@ -51,10 +50,10 @@ function App() {
     };
 
 
-    const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => void; }) => (
+    const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => void }) => (
         <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4" onClick={onClose}>
             <div className="glass-panel rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto p-6 md:p-8 relative transition-all duration-300 transform scale-95 animate-scale-in"
-                onClick={(e) => e.stopPropagation()}>
+                 onClick={(e) => e.stopPropagation()}>
                 <button onClick={onClose} className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors z-10">
                     <CloseIcon />
                 </button>
@@ -91,7 +90,7 @@ function App() {
 
             <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10">
                 <Blob styles="absolute top-0 -left-1/4 w-1/2 h-1/2 bg-magenta-500/30 rounded-full filter blur-3xl opacity-50 animate-blob" />
-                <Blob styles="absolute top-0 -right-1/4 w-1/2 h-1/2 bg-cyan-500/30 rounded-full filter blur-3xl opacity-50 animate-blob animation-delay-4000" />
+                <Blob styles="absolute top-0 -right-1/4 w-1/2 h-1/2 bg-cyan-500/30 rounded-full filter blur-3xl opacity-50 animate-blob animation-delay-2000" />
                 <Blob styles="absolute bottom-0 left-1/4 w-1/2 h-1/2 bg-indigo-500/30 rounded-full filter blur-3xl opacity-50 animate-blob animation-delay-4000" />
             </div>
 
@@ -105,7 +104,7 @@ function App() {
                             <span className="cyan-glow">Dhakshin Kotha</span>
                         </h1>
                         <p className="mt-4 text-xl md:text-2xl lg:text-3xl text-gray-300">
-                            An <span className="font-bold text-white magenta-glow">{typewriterText}</span>
+                           An <span className="font-bold text-white magenta-glow">{typewriterText}</span>
                             <span className="inline-block w-1 h-8 bg-cyan-400 animate-pulse ml-1"></span>
                         </p>
                     </div>
@@ -113,133 +112,145 @@ function App() {
 
                 {/* About Section */}
                 <Section id="about">
-                    <h2 className="text-4xl font-bold font-orbitron text-center mb-12 cyan-glow">About Me</h2>
-                    <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
-                        <img src={profileImage} alt="Dhakshin Kotha" className="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover shadow-2xl shadow-magenta-500/20 border-4 border-magenta-500/50" />
-                        <p className="text-lg text-gray-300 leading-relaxed text-center md:text-left">
-                            I'm an undergraduate at IIT Ropar, pursuing a BTech in Artificial Intelligence and Data Engineering. I have a strong foundation in C and a growing passion for blending technology with creativity—especially through software architecture, AI, and tech exploration. I thrive on solving real-world problems and collaborating with people who take initiative.
-                        </p>
-                    </div>
-                    <div className="mt-16">
-                        <h3 className="text-3xl font-bold font-orbitron text-center mb-8 magenta-glow">Core Skills</h3>
-                        <div className="flex flex-wrap justify-center gap-4">
-                            {skills.map(skill => (
-                                <div key={skill} className="glass-panel px-4 py-2 rounded-lg text-lg hover:bg-cyan-400/20 hover:text-cyan-300 transition-all cursor-pointer">
-                                    {skill}
-                                </div>
-                            ))}
+                    <MatrixRain />
+                    <div className="relative z-10">
+                        <h2 className="text-4xl font-bold font-orbitron text-center mb-12 cyan-glow">About Me</h2>
+                        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
+                            <div className="flex-shrink-0 w-48 h-48 md:w-60 md:h-60 rounded-full overflow-hidden shadow-2xl shadow-magenta-500/20 border-4 border-magenta-500/50">
+                                <img src={profileImage} alt="Dhakshin Kotha" className="w-full h-full object-cover"/>
+                            </div>
+                            <p className="text-lg text-gray-300 leading-relaxed text-center md:text-left">
+                               I'm an undergraduate at IIT Ropar, pursuing a BTech in Artificial Intelligence and Data Engineering. I have a strong foundation in C and a growing passion for blending technology with creativity—especially through software architecture, AI, and tech exploration. I thrive on solving real-world problems and collaborating with people who take initiative.
+                            </p>
+                        </div>
+                        <div className="mt-16">
+                            <h3 className="text-3xl font-bold font-orbitron text-center mb-8 magenta-glow">Core Skills</h3>
+                            <div className="flex flex-wrap justify-center gap-4">
+                                {skills.map(skill => (
+                                    <div key={skill} className="glass-panel px-4 py-2 rounded-lg text-lg hover:bg-cyan-400/20 hover:text-cyan-300 transition-all cursor-pointer">
+                                        {skill}
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </Section>
-
+                
                 {/* Education Section */}
                 <Section id="education">
-                    <h2 className="text-4xl font-bold font-orbitron text-center mb-16 cyan-glow">Education</h2>
-                    <div className="relative max-w-5xl mx-auto">
-                        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-cyan-500/50 via-magenta-500/50 to-indigo-500/50 rounded-full"></div>
-                        <div className="space-y-16">
-                            {education.map((edu, index) => (
-                                <TimelineItem key={edu.title + edu.company} experience={edu} isLeft={index % 2 === 0} />
-                            ))}
+                    <MatrixRain />
+                    <div className="relative z-10">
+                        <h2 className="text-4xl font-bold font-orbitron text-center mb-16 cyan-glow">Education</h2>
+                        <div className="relative max-w-5xl mx-auto">
+                            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1.5 bg-gradient-to-b from-cyan-500/50 via-magenta-500/50 to-indigo-500/50 rounded-full"></div>
+                            <div className="space-y-16">
+                                {education.map((edu, index) => (
+                                    <TimelineItem key={edu.title + edu.company} experience={edu} isLeft={index % 2 === 0} />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </Section>
-
+                
                 {/* Experience Section */}
                 <Section id="experience">
-                    <h2 className="text-4xl font-bold font-orbitron text-center mb-16 magenta-glow">Experience</h2>
-                    <div className="relative max-w-5xl mx-auto">
-                        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-magenta-500/50 via-indigo-500/50 to-cyan-500/50 rounded-full"></div>
-                        <div className="space-y-16">
-                            {experience.map((exp, index) => (
-                                <TimelineItem key={exp.title + exp.company} experience={exp} isLeft={index % 2 !== 0} />
-                            ))}
+                    <MatrixRain />
+                    <div className="relative z-10">
+                        <h2 className="text-4xl font-bold font-orbitron text-center mb-16 magenta-glow">Experience</h2>
+                        <div className="relative max-w-5xl mx-auto">
+                            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1.5 bg-gradient-to-b from-magenta-500/50 via-indigo-500/50 to-cyan-500/50 rounded-full"></div>
+                            <div className="space-y-16">
+                                {experience.map((exp, index) => (
+                                    <TimelineItem key={exp.title + exp.company} experience={exp} isLeft={index % 2 !== 0} />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </Section>
 
                 {/* Projects Section */}
                 <Section id="projects">
-                    <h2 className="text-4xl font-bold font-orbitron text-center mb-12 magenta-glow">My Projects</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                        {projects.map((project) => (
-                            <ProjectCard key={project.title} project={project} onCardClick={setSelectedProject} />
-                        ))}
+                    <MatrixRain />
+                    <div className="relative z-10">
+                        <h2 className="text-4xl font-bold font-orbitron text-center mb-12 magenta-glow">My Projects</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                            {projects.map((project) => (
+                                <ProjectCard key={project.title} project={project} onCardClick={setSelectedProject} />
+                            ))}
+                        </div>
                     </div>
                 </Section>
 
                 {/* Extras Section */}
                 <Section id="extras">
-                    <h2 className="text-4xl font-bold font-orbitron text-center mb-12 cyan-glow">Extras</h2>
-
-                    <div className="mb-20">
-                        <h3 className="text-3xl font-bold font-orbitron text-center mb-12 magenta-glow">Certifications</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                            {certifications.map((cert) => (
-                                <CertificationCard key={cert.title} certification={cert} />
-                            ))}
+                    <MatrixRain />
+                    <div className="relative z-10">
+                        <h2 className="text-4xl font-bold font-orbitron text-center mb-12 cyan-glow">Extras</h2>
+                        
+                        <div className="mb-20">
+                            <h3 className="text-3xl font-bold font-orbitron text-center mb-12 magenta-glow">Certifications</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                                {certifications.map((cert) => (
+                                    <CertificationCard key={cert.title} certification={cert} />
+                                ))}
+                            </div>
                         </div>
-                    </div>
+                        
+                        <div>
+                             <h3 className="text-3xl font-bold font-orbitron text-center mb-12 cyan-glow">Languages</h3>
+                            <div className="max-w-2xl mx-auto space-y-6">
+                                {languages.map((lang) => {
+                                    const getProficiencyWidth = (proficiency: string) => {
+                                        if (proficiency.toLowerCase().includes('native')) return '100%';
+                                        if (proficiency.toLowerCase().includes('professional')) return '90%';
+                                        return '75%';
+                                    };
 
-                    <div>
-                        <h3 className="text-3xl font-bold font-orbitron text-center mb-12 cyan-glow">Languages</h3>
-                        <div className="max-w-2xl mx-auto space-y-6">
-                            {languages.map((lang) => {
-                                const getProficiencyWidth = (proficiency: string) => {
-                                    if (proficiency.toLowerCase().includes('native')) return '100%';
-                                    if (proficiency.toLowerCase().includes('professional')) return '90%';
-                                    return '75%';
-                                };
-
-                                return (
-                                    <div key={lang.name} className="glass-panel p-4 rounded-lg transition-all hover:shadow-lg hover:shadow-cyan-500/10">
-                                        <div className="flex justify-between items-center mb-2 font-sans">
-                                            <h3 className="text-xl font-semibold text-white">{lang.name}</h3>
-                                            <p className="text-sm text-gray-400">{lang.proficiency}</p>
+                                    return (
+                                        <div key={lang.name} className="glass-panel p-4 rounded-lg transition-all hover:shadow-lg hover:shadow-cyan-500/10">
+                                            <div className="flex justify-between items-center mb-2 font-sans">
+                                                <h3 className="text-xl font-semibold text-white">{lang.name}</h3>
+                                                <p className="text-sm text-gray-400">{lang.proficiency}</p>
+                                            </div>
+                                            <div className="w-full bg-black/30 rounded-full h-2.5">
+                                                <div
+                                                    className="bg-gradient-to-r from-cyan-400 to-magenta-500 h-2.5 rounded-full"
+                                                    style={{ width: getProficiencyWidth(lang.proficiency) }}
+                                                ></div>
+                                            </div>
                                         </div>
-                                        <div className="w-full bg-black/30 rounded-full h-2.5">
-                                            <div
-                                                className="bg-gradient-to-r from-cyan-400 to-magenta-500 h-2.5 rounded-full"
-                                                style={{ width: getProficiencyWidth(lang.proficiency) }}
-                                            ></div>
-                                        </div>
-                                    </div>
-                                );
-                            })}
+                                    );
+                                })}
+                            </div>
                         </div>
                     </div>
                 </Section>
 
                 {/* Contact Section */}
                 <Section id="contact">
-                    <h2 className="text-4xl font-bold font-orbitron text-center mb-12 cyan-glow">Get In Touch</h2>
-                    <div className="max-w-2xl mx-auto glass-panel p-8 rounded-2xl">
-                        <form className="space-y-6" onSubmit={handleFormSubmit}>
-                            <input type="text" name="name" value={formData.name} onChange={handleFormChange} placeholder="Your Name" className="w-full bg-transparent border-b-2 border-gray-500 focus:border-cyan-400 outline-none p-3 transition-colors text-lg" required />
-                            <input type="email" name="email" value={formData.email} onChange={handleFormChange} placeholder="Your Email" className="w-full bg-transparent border-b-2 border-gray-500 focus:border-cyan-400 outline-none p-3 transition-colors text-lg" required />
-                            <textarea name="message" value={formData.message} onChange={handleFormChange} placeholder="Your Message" rows={4} className="w-full bg-transparent border-b-2 border-gray-500 focus:border-cyan-400 outline-none p-3 transition-colors text-lg" required></textarea>
-                            <button type="submit" className="w-full font-orbitron font-bold py-3 px-6 bg-gradient-to-r from-cyan-500 to-magenta-500 rounded-lg text-white hover:opacity-90 transition-opacity transform hover:scale-105">
-                                Send Message
-                            </button>
-                        </form>
+                    <MatrixRain />
+                    <div className="relative z-10">
+                         <h2 className="text-4xl font-bold font-orbitron text-center mb-12 cyan-glow">Get In Touch</h2>
+                         <div className="max-w-2xl mx-auto glass-panel p-8 rounded-2xl">
+                             <form className="space-y-6" onSubmit={handleFormSubmit}>
+                                 <input type="text" name="name" value={formData.name} onChange={handleFormChange} placeholder="Your Name" className="w-full bg-transparent border-b-2 border-gray-500 focus:border-cyan-400 outline-none p-3 transition-colors text-lg" required />
+                                 <input type="email" name="email" value={formData.email} onChange={handleFormChange} placeholder="Your Email" className="w-full bg-transparent border-b-2 border-gray-500 focus:border-cyan-400 outline-none p-3 transition-colors text-lg" required />
+                                 <textarea name="message" value={formData.message} onChange={handleFormChange} placeholder="Your Message" rows={4} className="w-full bg-transparent border-b-2 border-gray-500 focus:border-cyan-400 outline-none p-3 transition-colors text-lg" required></textarea>
+                                 <button type="submit" className="w-full font-orbitron font-bold py-3 px-6 bg-gradient-to-r from-cyan-500 to-magenta-500 rounded-lg text-white hover:opacity-90 transition-opacity transform hover:scale-105">
+                                     Send Message
+                                 </button>
+                             </form>
+                         </div>
                     </div>
                 </Section>
             </main>
-
+            
             <footer className="relative py-12 px-4 text-center overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500/50 via-magenta-500/50 to-indigo-500/50 animate-pulse"></div>
-                <div className="flex justify-center gap-6 mb-4">
+                 <div className="flex justify-center gap-6 mb-4">
                     <a href="https://github.com/Dhakshin2007" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125"><GitHubIcon /></a>
                     <a href="https://linkedin.com/in/dhakshinkotha" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125"><LinkedInIcon /></a>
                     <a href="mailto:dhakshinkotha2007@gmail.com" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125"><MailIcon /></a>
-                    <a
-                        href="https://linktr.ee/dhakshinkotha"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125"
-                    >
-                        <LinktreeIcon />
-                    </a>
                 </div>
                 <p className="text-gray-500">&copy; {new Date().getFullYear()} Dhakshin Kotha. All rights reserved.</p>
             </footer>
@@ -247,6 +258,6 @@ function App() {
             {selectedProject && <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />}
         </div>
     );
-}
+};
 
 export default App;

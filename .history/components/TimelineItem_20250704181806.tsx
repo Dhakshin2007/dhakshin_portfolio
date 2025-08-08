@@ -26,10 +26,7 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({ experience, isLeft }
 
     return (
         <div className={`flex items-center w-full relative ${isLeft ? 'justify-start' : 'justify-end'}`}>
-            {/* Connector Line */}
-            <div className="hidden md:block absolute top-1/2 -translate-y-px h-0.5 w-8 bg-cyan-500" style={isLeft ? { right: '50%' } : { left: '50%' }}></div>
-            {/* Dot on Timeline */}
-            <div className="hidden md:block absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-cyan-500 rounded-full z-10" style={isLeft ? { right: 'calc(50% - 8px)' } : { left: 'calc(50% - 8px)' }}></div>
+            <div className="hidden md:block absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-cyan-500 rounded-full" style={isLeft ? { right: 'calc(50% - 8px)' } : { left: 'calc(50% - 8px)' }}></div>
             {content}
         </div>
     );

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Header } from './components/Header';
 import { AnimatedCursor } from './components/AnimatedCursor';
@@ -10,10 +11,10 @@ import { useTypewriter } from './hooks/useTypewriter';
 import { projects, education, experience, languages, navLinks, skills, certifications } from './constants';
 import { profileImage } from './assets/profile';
 import { Project } from './types';
-import { GitHubIcon, LinkedInIcon, MailIcon, LinkIcon, CodeIcon, CloseIcon, LinktreeIcon } from './components/IconComponents';
+import { GitHubIcon, LinkedInIcon, MailIcon, LinkIcon, CodeIcon, CloseIcon } from './components/IconComponents';
 import { MeteorBackground } from './components/MeteorBackground';
 import { CelestialBackground } from './components/CelestialBackground';
-
+import { MatrixRain } from './components/MatrixRain';
 
 const App: React.FC = () => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -111,21 +112,24 @@ const App: React.FC = () => {
 
                 {/* About Section */}
                 <Section id="about">
-                    <h2 className="text-4xl font-bold font-orbitron text-center mb-12 cyan-glow">About Me</h2>
-                    <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
-                        <img src={profileImage} alt="Dhakshin Kotha" className="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover shadow-2xl shadow-magenta-500/20 border-4 border-magenta-500/50"/>
-                        <p className="text-lg text-gray-300 leading-relaxed text-center md:text-left">
-                           I'm an undergraduate at IIT Ropar, pursuing a BTech in Artificial Intelligence and Data Engineering. I have a strong foundation in C and a growing passion for blending technology with creativity—especially through software architecture, AI, and tech exploration. I thrive on solving real-world problems and collaborating with people who take initiative.
-                        </p>
-                    </div>
-                    <div className="mt-16">
-                        <h3 className="text-3xl font-bold font-orbitron text-center mb-8 magenta-glow">Core Skills</h3>
-                        <div className="flex flex-wrap justify-center gap-4">
-                            {skills.map(skill => (
-                                <div key={skill} className="glass-panel px-4 py-2 rounded-lg text-lg hover:bg-cyan-400/20 hover:text-cyan-300 transition-all cursor-pointer">
-                                    {skill}
-                                </div>
-                            ))}
+                    <MatrixRain />
+                    <div className="relative z-10">
+                        <h2 className="text-4xl font-bold font-orbitron text-center mb-12 cyan-glow">About Me</h2>
+                        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
+                            <img src={profileImage} alt="Dhakshin Kotha" className="w-48 h-48 md:w-60 md:h-60 rounded-full object-cover shadow-2xl shadow-magenta-500/20 border-4 border-magenta-500/50"/>
+                            <p className="text-lg text-gray-300 leading-relaxed text-center md:text-left">
+                               I'm an undergraduate at IIT Ropar, pursuing a BTech in Artificial Intelligence and Data Engineering. I have a strong foundation in C and a growing passion for blending technology with creativity—especially through software architecture, AI, and tech exploration. I thrive on solving real-world problems and collaborating with people who take initiative.
+                            </p>
+                        </div>
+                        <div className="mt-16">
+                            <h3 className="text-3xl font-bold font-orbitron text-center mb-8 magenta-glow">Core Skills</h3>
+                            <div className="flex flex-wrap justify-center gap-4">
+                                {skills.map(skill => (
+                                    <div key={skill} className="glass-panel px-4 py-2 rounded-lg text-lg hover:bg-cyan-400/20 hover:text-cyan-300 transition-all cursor-pointer">
+                                        {skill}
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </Section>
@@ -230,14 +234,6 @@ const App: React.FC = () => {
                     <a href="https://github.com/Dhakshin2007" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125"><GitHubIcon /></a>
                     <a href="https://linkedin.com/in/dhakshinkotha" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125"><LinkedInIcon /></a>
                     <a href="mailto:dhakshinkotha2007@gmail.com" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125"><MailIcon /></a>
-                    <a
-                      href="https://linktr.ee/dhakshinkotha"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125"
-                    >
-                      <LinktreeIcon />
-                    </a>
                 </div>
                 <p className="text-gray-500">&copy; {new Date().getFullYear()} Dhakshin Kotha. All rights reserved.</p>
             </footer>

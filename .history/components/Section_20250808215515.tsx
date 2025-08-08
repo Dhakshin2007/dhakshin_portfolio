@@ -9,7 +9,7 @@ interface SectionProps {
 }
 
 export const Section: React.FC<SectionProps> = ({ id, children, className = '' }) => {
-    const ref = useRef<Element>(null);
+    const ref = useRef<HTMLDivElement | null>(null);
     const isVisible = useIntersectionObserver(ref, { threshold: 0.1 });
 
     return (
