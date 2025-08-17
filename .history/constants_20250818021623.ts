@@ -1,7 +1,7 @@
 import React from 'react';
 import { Project, Experience, NavLink, Language, Certification } from './types';
 import { BriefcaseIcon, GraduationCapIcon } from './components/IconComponents';
-import { hpLifeLogo, googleCloudLogo, tcsIonLogo, anthropicLogo, awsLogo } from './assets/logo.ts';
+import { hpLifeLogo, googleCloudLogo, tcsIonLogo, anthropicLogo, awsLogo } from './assets/logos';
 
 export const navLinks: NavLink[] = [
     { id: 'home', title: 'Home' },
@@ -23,7 +23,7 @@ export const projects: Project[] = [
     {
         title: 'BLEPay — Gesture & BLE Payments',
         description: 'Innovative prototype enabling hands-free UPI payments using BLE signals and device tap gestures. Built with Firebase, Google AI Studio, and React.',
-        image: 'https://www.shutterstock.com/image-vector/payment-approved-online-card-concept-600nw-2133510943.jpg',
+        image: 'https://picsum.photos/seed/blepay/600/400',
         tags: ['ReactJS', 'Firebase', 'Google AI', 'BLE'],
         liveUrl: 'https://blepay.vercel.app/',
         codeUrl: 'https://github.com/Dhakshin2007/Tapless_Pay',
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     {
         title: 'Whatsapp Web Lock Extension',
         description: 'It is a Whatsapp Web Extension to Lock which safe and Secure , I am not even collecting any data from the user, it is just a simple extension to lock your whatsapp web.',
-        image: 'https://www.igeeksblog.com/wp-content/uploads/2023/07/Lock-WhatsApp-chats-on-iPhone.jpg',
+        image: 'https://picsum.photos/seed/prompt/600/400',
         tags: ['JavaScript', 'Html', 'CSS', 'Extension'],
         liveUrl: '#',
         codeUrl: 'https://github.com/Dhakshin2007/wsuplock/tree/main',

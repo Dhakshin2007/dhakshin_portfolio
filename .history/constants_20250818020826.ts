@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { Project, Experience, NavLink, Language, Certification } from './types';
 import { BriefcaseIcon, GraduationCapIcon } from './components/IconComponents';
-import { hpLifeLogo, googleCloudLogo, tcsIonLogo, anthropicLogo, awsLogo } from './assets/logo.ts';
+import { awsLogo, googleCloudLogo, hpLifeLogo, tcsIonLogo, anthropicLogo } from '/logos.ts';
 
 export const navLinks: NavLink[] = [
     { id: 'home', title: 'Home' },
@@ -10,20 +11,19 @@ export const navLinks: NavLink[] = [
     { id: 'experience', title: 'Experience' },
     { id: 'projects', title: 'Projects' },
     { id: 'extras', title: 'Extras' },
-    { id: 'game', title: 'Game' },
     { id: 'contact', title: 'Contact' },
 ];
 
 export const skills: string[] = [
-    'C', 'AI & Data Engineering', 'Software Architecture', 'Firebase', 'Canva',
-    'Google AI', 'Prompt Design', 'TinkerCAD', 'Git & GitHub', 'Python', 'TypeScript'
+    'C', 'AI & Data Engineering', 'Software Architecture', 'Firebase', 'Canva', 
+    'Google AI', 'Prompt Design', 'TinkerCAD', 'Git & GitHub' , 'Python' ,'Tyepscript'
 ];
 
 export const projects: Project[] = [
     {
         title: 'BLEPay — Gesture & BLE Payments',
         description: 'Innovative prototype enabling hands-free UPI payments using BLE signals and device tap gestures. Built with Firebase, Google AI Studio, and React.',
-        image: 'https://www.shutterstock.com/image-vector/payment-approved-online-card-concept-600nw-2133510943.jpg',
+        image: 'https://picsum.photos/seed/blepay/600/400',
         tags: ['ReactJS', 'Firebase', 'Google AI', 'BLE'],
         liveUrl: 'https://blepay.vercel.app/',
         codeUrl: 'https://github.com/Dhakshin2007/Tapless_Pay',
@@ -32,7 +32,7 @@ export const projects: Project[] = [
         title: 'QrGo - Event Hosting & Ticket Management',
         description: 'With QrGo, event organizers can generate tickets, verify attendees, and track participation — all in one streamlined platform. Built with Gemini 2.5 Pro & ChatGPT 5 as Coding Companions',
         image: 'https://i.postimg.cc/qqNh1hD9/Google-AI-Studio-2025-08-09-T14-17-15-618-Z.png',
-        tags: ['TypeScript (TSX / TS)', 'Firebase', 'Google AI', 'Event Booking', 'Supabase'],
+        tags: ['TypeScript ( TSX / TS )', 'Firebase', 'Google AI', 'Event Booking' , 'Supabase'],
         liveUrl: 'https://qrgo-weld.vercel.app/#/',
         codeUrl: '#',
     },
@@ -40,15 +40,15 @@ export const projects: Project[] = [
         title: 'TCA Website',
         description: 'Designed and redacted visual content for the Telugu Culture Association at IIT Ropar, enhancing public engagement through creative graphics using Canva. Website showcases the association\'s activities and events.',
         image: 'https://picsum.photos/seed/tca/600/400',
-        tags: ['Canva', 'Graphic Design', 'Public Relations', 'IIT Ropar', 'WebDevelopment'],
+        tags: ['Canva', 'Graphic Design', 'Public Relations' , 'IIT Ropar' , 'WebDevelopment'],
         liveUrl: 'https://tcaiitrpr.vercel.app/',
         codeUrl: 'https://github.com/Dhakshin2007/tca_website/tree/main',
     },
     {
         title: 'Whatsapp Web Lock Extension',
         description: 'It is a Whatsapp Web Extension to Lock which safe and Secure , I am not even collecting any data from the user, it is just a simple extension to lock your whatsapp web.',
-        image: 'https://www.igeeksblog.com/wp-content/uploads/2023/07/Lock-WhatsApp-chats-on-iPhone.jpg',
-        tags: ['JavaScript', 'Html', 'CSS', 'Extension'],
+        image: 'https://picsum.photos/seed/prompt/600/400',
+        tags: ['Java Script', 'Html', 'CSS' , 'Extension'],
         liveUrl: '#',
         codeUrl: 'https://github.com/Dhakshin2007/wsuplock/tree/main',
     },
@@ -56,7 +56,7 @@ export const projects: Project[] = [
         title: 'College Entry and Exit System',
         description: 'A web application designed to streamline the process of recording student entry and exit times at college, enhancing campus security and attendance tracking.',
         image: 'https://www.iitms.co.in/rfid-based-attendance-system/img/Biometric-Attendance-System-Application-banner.png',
-        tags: ['JavaScript', 'Html', 'CSS', 'Entry System'],
+        tags: ['Java Script', 'Html', 'CSS' , 'Entry System'],
         liveUrl: 'https://college-entry-system.onrender.com',
         codeUrl: 'https://github.com/Dhakshin2007/entry_system',
     },
@@ -64,7 +64,7 @@ export const projects: Project[] = [
         title: 'AI Women Safety Web Service',
         description: 'A web service that uses AI to enhance women safety by providing real-time alerts and location tracking, ensuring a secure environment.',
         image: 'https://open-ai.sgp1.digitaloceanspaces.com/blogs/ai-s-next-frontier-a-safer-world-for-women.webp',
-        tags: ['JavaScript', 'Html', 'CSS', 'Safety System'],
+        tags: ['Java Script', 'Html', 'CSS' , 'Safety System'],
         liveUrl: 'https://www.linkedin.com/posts/dhakshinkotha_aiforgood-womensafety-hackforchange-activity-7341751189216075777-e-iq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFVUKLoBsAeJw5dsDyd1maoE5UhEk2xPf7M',
         codeUrl: '#',
     },
@@ -147,7 +147,8 @@ export const certifications: Certification[] = [
         credentialUrl: 'https://www.life-global.org/certificate/12c5dcc9-affc-4127-817a-45eabd0ffdc1',
         description: 'Learned foundational concepts in data science, including data analysis, visualization, and interpretation.',
         skills: ['Data Science', 'Analytics'],
-        logo: hpLifeLogo,
+        // logo: React.createElement(HPLifeLogo),
+        logo: awsLogo
     },
     {
         title: 'Prompt Design in AI',
@@ -156,7 +157,8 @@ export const certifications: Certification[] = [
         credentialUrl: 'https://www.credly.com/badges/71e37d9b-84f3-4edf-8c08-5963f77931fe/public_url',
         description: 'This course equipped me with knowledge for designing prompts that produce meaningful AI outcomes and helps make use of its potential towards delivering innovative content creation.',
         skills: ['Prompt Design', 'AI'],
-        logo: googleCloudLogo,
+        // logo: React.createElement(GoogleCloudLogo),
+        logo: googleCloudLogo
     },
     {
         title: 'Soft Skills',
@@ -165,25 +167,28 @@ export const certifications: Certification[] = [
         credentialUrl: '#',
         description: 'Developed key professional soft skills including communication, teamwork, and public speaking. Credential ID: 119854-27523403-1016.',
         skills: ['Soft Skills', 'Public Speaking'],
-        logo: tcsIonLogo,
+        // logo: React.createElement(TcsIonLogo),
+        logo: tcsIonLogo
     },
     {
         title: 'Solution Architecture',
-        issuer: 'Amazon Web Services(AWS)',
+        issuer: 'Amazon Web Sevices(AWS)',
         date: 'Issued July 2025',
         credentialUrl: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_rLX2boarfdpzGPWu3_1753160372622_completion_certificate.pdf',
         description: 'This course provided a comprehensive understanding of solution architecture principles, focusing on designing scalable and efficient systems using AWS services.',
         skills: ['Solution Architecture', 'Client Handling'],
-        logo: awsLogo,
+        // logo: React.createElement(AWSLogo), // Assuming you have an AmazonWebServicesLogo component
+        logo: awsLogo
     },
     {
-        title: 'Introduction to Model Context Protocol',
+        title: 'Introduction to Model Context Protoca;',
         issuer: 'Anthropic',
         date: 'Issued August 2025',
         credentialUrl: 'https://verify.skilljar.com/c/i8njtsn43ogz',
-        description: 'This helped me Understanding the LLM Models and Their Protocols and how the models work with the servers.',
-        skills: ['Model Context Protocol', 'LLM Models'],
-        logo: anthropicLogo,
+        description: 'This helped me Understanding the LLM Models and Their Protocals and how the models work with the servers.',
+        skills: ['Model Context Protocal', 'LLM Models'],
+        // logo: React.createElement(AWSLogo), 
+        logo: anthropicLogo
     },
 ];
 

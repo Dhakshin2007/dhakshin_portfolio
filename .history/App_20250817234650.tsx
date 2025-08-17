@@ -7,16 +7,14 @@ import { ProjectCard } from './components/ProjectCard';
 import { TimelineItem } from './components/TimelineItem';
 import { CertificationCard } from './components/CertificationCard';
 import { useTypewriter } from './hooks/useTypewriter';
-import { projects, education, experience, languages, navLinks, skills, certifications, keyCourses } from './constants';
+import { projects, education, experience, languages, navLinks, skills, certifications } from './constants';
 import { profileImage } from './assets/profile';
-import { resumeDriveLink } from './assets/resume';
 import { Project } from './types';
 import { GitHubIcon, LinkedInIcon, MailIcon, LinkIcon, CodeIcon, CloseIcon } from './components/IconComponents';
 import { MeteorBackground } from './components/MeteorBackground';
 import { CelestialBackground } from './components/CelestialBackground';
 import { MatrixRain } from './components/MatrixRain';
 import { CyberRunnerGame } from './components/CyberRunnerGame';
-import { SpotifyPlayer } from './components/SpotifyPlayer';
 
 const App: React.FC = () => {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -24,7 +22,6 @@ const App: React.FC = () => {
     const typewriterText = useTypewriter(roles, 150, 100, 2000);
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [visitorCount, setVisitorCount] = useState<number | null>(null);
-    const [isSpotifyPlayerVisible, setIsSpotifyPlayerVisible] = useState(false);
 
     const mainContainerRef = useRef<HTMLDivElement>(null);
     
@@ -39,12 +36,15 @@ const App: React.FC = () => {
     useEffect(() => {
         const fetchVisitorCount = async () => {
             try {
+                // Using a free and privacy-friendly counting API.
+                // Switched to counterapi.dev for better reliability.
                 const response = await fetch('https://api.counterapi.dev/v1/dhakshinkotha-portfolio/visits/up');
                 if (!response.ok) throw new Error('Network response was not ok');
                 const data = await response.json();
-                setVisitorCount(data.count);
+                setVisitorCount(data.count); // The new API returns 'count' instead of 'value'
             } catch (error) {
                 console.error("Could not fetch visitor count:", error);
+                // Silently fail, so the UI doesn't show a broken counter.
             }
         };
 
@@ -65,11 +65,7 @@ const App: React.FC = () => {
         e.preventDefault();
         const subject = encodeURIComponent("Contact from Portfolio");
         const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-        window.location.href = `mailto:2024aib1009@iitrpr.ac.in?subject=${subject}&body=${body}`;
-    };
-
-    const handleResumeClick = () => {
-        window.open(resumeDriveLink, '_blank', 'noopener,noreferrer');
+        window.location.href = `mailto:dhakshinkotha2007@gmail.com?subject=${subject}&body=${body}`;
     };
 
 
@@ -93,16 +89,12 @@ const App: React.FC = () => {
                         </div>
                         <p className="text-gray-300 flex-grow mb-6">{project.description}</p>
                         <div className="flex gap-4 mt-auto">
-                           {project.liveUrl !== '#' && (
-                             <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-cyan-500 text-black font-bold py-2 px-4 rounded-lg hover:bg-cyan-400 transition-all transform hover:scale-105">
+                            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-cyan-500 text-black font-bold py-2 px-4 rounded-lg hover:bg-cyan-400 transition-all transform hover:scale-105">
                                 <LinkIcon /> Live Demo
                             </a>
-                           )}
-                           {project.codeUrl !== '#' && (
                             <a href={project.codeUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-gray-700 text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-600 transition-all transform hover:scale-105">
                                 <CodeIcon /> View Code
                             </a>
-                           )}
                         </div>
                     </div>
                 </div>
@@ -113,13 +105,7 @@ const App: React.FC = () => {
     return (
         <div ref={mainContainerRef} className="bg-[#0D0D0D] text-white scroll-smooth">
             <AnimatedCursor />
-            <Header 
-                navLinks={navLinks} 
-                onNavClick={scrollToSection} 
-                onMusicClick={() => setIsSpotifyPlayerVisible(prev => !prev)}
-                onResumeClick={handleResumeClick}
-            />
-            <SpotifyPlayer isVisible={isSpotifyPlayerVisible} onClose={() => setIsSpotifyPlayerVisible(false)} />
+            <Header navLinks={navLinks} onNavClick={scrollToSection} />
 
             <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-10">
                 <Blob styles="absolute top-0 -left-1/4 w-1/2 h-1/2 bg-magenta-500/30 rounded-full filter blur-3xl opacity-50 animate-blob" />
@@ -153,7 +139,7 @@ const App: React.FC = () => {
                                 <img src={profileImage} alt="Dhakshin Kotha" className="w-full h-full object-cover"/>
                             </div>
                             <p className="text-lg text-gray-300 leading-relaxed text-center md:text-left">
-                                I'm a first-year B.Tech student in Artificial Intelligence and Data Engineering at the Indian Institute of Technology, Ropar. My passion lies in software architecture and building robust, production-level systems. I have hands-on experience in circuit design from my research traineeship and a proven ability to develop practical applications, from event ticketing platforms to contactless payment prototypes. I am always eager to tackle real-world challenges and innovate with technology.
+                               I'm an undergraduate at IIT Ropar, pursuing a BTech in Artificial Intelligence and Data Engineering. I have a strong foundation in C and a growing passion for blending technology with creativity—especially through software architecture, AI, and tech exploration. I thrive on solving real-world problems and collaborating with people who take initiative.
                             </p>
                         </div>
                         <div className="mt-16">
@@ -189,7 +175,7 @@ const App: React.FC = () => {
                 <Section id="experience">
                     <MatrixRain />
                     <div className="relative z-10">
-                        <h2 className="text-4xl font-bold font-orbitron text-center mb-16 magenta-glow">Experience & Responsibilities</h2>
+                        <h2 className="text-4xl font-bold font-orbitron text-center mb-16 magenta-glow">Experience</h2>
                         <div className="relative max-w-5xl mx-auto">
                             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1.5 bg-gradient-to-b from-magenta-500/50 via-indigo-500/50 to-cyan-500/50 rounded-full"></div>
                             <div className="space-y-16">
@@ -221,29 +207,16 @@ const App: React.FC = () => {
                         <h2 className="text-4xl font-bold font-orbitron text-center mb-12 cyan-glow">Extras</h2>
                         
                         <div className="mb-20">
-                            <h3 className="text-3xl font-bold font-orbitron text-center mb-12 magenta-glow">Certifications & Trainings</h3>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                            <h3 className="text-3xl font-bold font-orbitron text-center mb-12 magenta-glow">Certifications</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
                                 {certifications.map((cert) => (
                                     <CertificationCard key={cert.title} certification={cert} />
                                 ))}
                             </div>
                         </div>
                         
-                        <div className="mb-20">
-                             <h3 className="text-3xl font-bold font-orbitron text-center mb-12 cyan-glow">Key Courses Taken</h3>
-                            <div className="max-w-4xl mx-auto glass-panel p-8 rounded-xl">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
-                                    {keyCourses.map((course) => (
-                                        <div key={course} className="text-lg text-gray-300 border-l-4 border-cyan-500 pl-4">
-                                            {course}
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-
                         <div>
-                             <h3 className="text-3xl font-bold font-orbitron text-center mb-12 magenta-glow">Languages</h3>
+                             <h3 className="text-3xl font-bold font-orbitron text-center mb-12 cyan-glow">Languages</h3>
                             <div className="max-w-2xl mx-auto space-y-6">
                                 {languages.map((lang) => {
                                     const getProficiencyWidth = (proficiency: string) => {
@@ -305,7 +278,7 @@ const App: React.FC = () => {
                  <div className="flex justify-center gap-6 mb-4">
                     <a href="https://github.com/Dhakshin2007" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125"><GitHubIcon /></a>
                     <a href="https://linkedin.com/in/dhakshinkotha" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125"><LinkedInIcon /></a>
-                    <a href="mailto:2024aib1009@iitrpr.ac.in" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125"><MailIcon /></a>
+                    <a href="mailto:dhakshinkotha2007@gmail.com" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125"><MailIcon /></a>
                 </div>
                 <p className="text-gray-500">&copy; {new Date().getFullYear()} Dhakshin Kotha. All rights reserved.</p>
                 {visitorCount !== null && (

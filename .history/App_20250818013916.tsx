@@ -222,7 +222,7 @@ const App: React.FC = () => {
                         
                         <div className="mb-20">
                             <h3 className="text-3xl font-bold font-orbitron text-center mb-12 magenta-glow">Certifications & Trainings</h3>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-12">
                                 {certifications.map((cert) => (
                                     <CertificationCard key={cert.title} certification={cert} />
                                 ))}

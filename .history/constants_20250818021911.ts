@@ -47,7 +47,7 @@ export const projects: Project[] = [
     {
         title: 'Whatsapp Web Lock Extension',
         description: 'It is a Whatsapp Web Extension to Lock which safe and Secure , I am not even collecting any data from the user, it is just a simple extension to lock your whatsapp web.',
-        image: 'https://www.igeeksblog.com/wp-content/uploads/2023/07/Lock-WhatsApp-chats-on-iPhone.jpg',
+        image: 'https://picsum.photos/seed/prompt/600/400',
         tags: ['JavaScript', 'Html', 'CSS', 'Extension'],
         liveUrl: '#',
         codeUrl: 'https://github.com/Dhakshin2007/wsuplock/tree/main',
