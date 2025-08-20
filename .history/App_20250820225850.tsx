@@ -7,7 +7,7 @@ import { ProjectCard } from './components/ProjectCard';
 import { TimelineItem } from './components/TimelineItem';
 import { CertificationCard } from './components/CertificationCard';
 import { useTypewriter } from './hooks/useTypewriter';
-import { projects, education, experience, languages, navLinks, categorizedSkills, certifications, keyCourses } from './constants';
+import { projects, education, experience, languages, navLinks, skills, certifications, keyCourses } from './constants';
 import { profileImage } from './assets/profile';
 import { resumeDriveLink } from './assets/resume';
 import { Project } from './types';
@@ -147,26 +147,17 @@ const App: React.FC = () => {
                 {/* About Section */}
                 <Section id="about">
                     <MatrixRain />
-                    <div className="relative z-10 max-w-7xl mx-auto">
-                        <h2 className="text-4xl font-bold font-orbitron text-center mb-16 cyan-glow">About &amp; Skills</h2>
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-16 items-start">
-                            {/* Column 1: About Card */}
-                            <div className="w-full flex justify-center">
-                                <AboutCard />
-                            </div>
-
-                            {/* Column 2: Skills */}
-                            <div className="flex flex-col gap-6">
-                                {categorizedSkills.map(({ category, skills }) => (
-                                    <div key={category} className="glass-panel p-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-magenta-500/15">
-                                        <h3 className="text-2xl font-bold font-orbitron mb-4 magenta-glow">{category}</h3>
-                                        <div className="flex flex-wrap gap-3">
-                                            {skills.map(skill => (
-                                                <div key={skill} className="bg-gray-800/50 text-cyan-300 px-3 py-1.5 rounded-lg text-sm font-medium hover:bg-cyan-400/20 hover:text-cyan-200 transition-all cursor-default">
-                                                    {skill}
-                                                </div>
-                                            ))}
-                                        </div>
+                    <div className="relative z-10">
+                        <h2 className="text-4xl font-bold font-orbitron text-center mb-16 cyan-glow">About Me</h2>
+                        <div className="flex justify-center items-center px-4">
+                            <AboutCard />
+                        </div>
+                        <div className="mt-20">
+                            <h3 className="text-3xl font-bold font-orbitron text-center mb-8 magenta-glow">Core Skills</h3>
+                            <div className="flex flex-wrap justify-center gap-4">
+                                {skills.map(skill => (
+                                    <div key={skill} className="glass-panel px-4 py-2 rounded-lg text-lg hover:bg-cyan-400/20 hover:text-cyan-300 transition-all cursor-pointer">
+                                        {skill}
                                     </div>
                                 ))}
                             </div>
@@ -234,51 +225,46 @@ const App: React.FC = () => {
                             </div>
                         </div>
                         
-                        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-16">
-                            {/* Column 1: Key Courses */}
-                            <div>
-                                <h3 className="text-3xl font-bold font-orbitron text-center mb-8 cyan-glow">Key Courses Taken</h3>
-                                <div className="glass-panel p-8 rounded-xl h-full">
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-x-12 gap-y-4">
-                                        {keyCourses.map((course) => (
-                                            <div key={course} className="text-lg text-gray-300 border-l-4 border-cyan-500 pl-4">
-                                                {course}
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            {/* Column 2: Languages */}
-                            <div>
-                                <h3 className="text-3xl font-bold font-orbitron text-center mb-8 magenta-glow">Languages</h3>
-                                <div className="space-y-6">
-                                    {languages.map((lang) => {
-                                        const getProficiencyWidth = (proficiency: string) => {
-                                            if (proficiency.toLowerCase().includes('native')) return '100%';
-                                            if (proficiency.toLowerCase().includes('professional')) return '90%';
-                                            return '75%';
-                                        };
-
-                                        return (
-                                            <div key={lang.name} className="glass-panel p-4 rounded-lg transition-all hover:shadow-lg hover:shadow-cyan-500/10">
-                                                <div className="flex justify-between items-center mb-2 font-sans">
-                                                    <h3 className="text-xl font-semibold text-white">{lang.name}</h3>
-                                                    <p className="text-sm text-gray-400">{lang.proficiency}</p>
-                                                </div>
-                                                <div className="w-full bg-black/30 rounded-full h-2.5">
-                                                    <div
-                                                        className="bg-gradient-to-r from-cyan-400 to-magenta-500 h-2.5 rounded-full"
-                                                        style={{ width: getProficiencyWidth(lang.proficiency) }}
-                                                    ></div>
-                                                </div>
-                                            </div>
-                                        );
-                                    })}
+                        <div className="mb-20">
+                             <h3 className="text-3xl font-bold font-orbitron text-center mb-12 cyan-glow">Key Courses Taken</h3>
+                            <div className="max-w-4xl mx-auto glass-panel p-8 rounded-xl">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+                                    {keyCourses.map((course) => (
+                                        <div key={course} className="text-lg text-gray-300 border-l-4 border-cyan-500 pl-4">
+                                            {course}
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
 
+                        <div>
+                             <h3 className="text-3xl font-bold font-orbitron text-center mb-12 magenta-glow">Languages</h3>
+                            <div className="max-w-2xl mx-auto space-y-6">
+                                {languages.map((lang) => {
+                                    const getProficiencyWidth = (proficiency: string) => {
+                                        if (proficiency.toLowerCase().includes('native')) return '100%';
+                                        if (proficiency.toLowerCase().includes('professional')) return '90%';
+                                        return '75%';
+                                    };
+
+                                    return (
+                                        <div key={lang.name} className="glass-panel p-4 rounded-lg transition-all hover:shadow-lg hover:shadow-cyan-500/10">
+                                            <div className="flex justify-between items-center mb-2 font-sans">
+                                                <h3 className="text-xl font-semibold text-white">{lang.name}</h3>
+                                                <p className="text-sm text-gray-400">{lang.proficiency}</p>
+                                            </div>
+                                            <div className="w-full bg-black/30 rounded-full h-2.5">
+                                                <div
+                                                    className="bg-gradient-to-r from-cyan-400 to-magenta-500 h-2.5 rounded-full"
+                                                    style={{ width: getProficiencyWidth(lang.proficiency) }}
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
                     </div>
                 </Section>
 

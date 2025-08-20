@@ -97,30 +97,6 @@
         .animate-pulse-glow {
             animation: pulse-glow 2.5s infinite ease-in-out;
         }
-
-      /* Styles for glassy, reflective card effect */
-        .card-face {
-            position: relative;
-            overflow: hidden; /* Important to contain the glare */
-        }
-
-        .card-face::after {
-            content: '';
-            position: absolute;
-            top: var(--y, 50%);
-            left: var(--x, 50%);
-            transform: translate(-50%, -50%);
-            width: 350px; /* Size of the glare spot */
-            height: 350px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 60%);
-            opacity: 0;
-            transition: opacity 0.4s ease-out;
-            pointer-events: none; /* Let clicks pass through */
-        }
-        
-        .card-container:hover .card-face::after {
-            opacity: 1;
-        }
   </style>
 
   <!-- React Import Map -->

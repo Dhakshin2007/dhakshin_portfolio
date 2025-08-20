@@ -5,7 +5,7 @@ import { hpLifeLogo, googleCloudLogo, tcsIonLogo, anthropicLogo, awsLogo } from 
 
 export const navLinks: NavLink[] = [
     { id: 'home', title: 'Home' },
-    { id: 'about', title: 'About & Skills' },
+    { id: 'about', title: 'About' },
     { id: 'education', title: 'Education' },
     { id: 'experience', title: 'Experience' },
     { id: 'projects', title: 'Projects' },

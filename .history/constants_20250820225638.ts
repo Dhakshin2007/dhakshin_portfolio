@@ -5,7 +5,7 @@ import { hpLifeLogo, googleCloudLogo, tcsIonLogo, anthropicLogo, awsLogo } from 
 
 export const navLinks: NavLink[] = [
     { id: 'home', title: 'Home' },
-    { id: 'about', title: 'About & Skills' },
+    { id: 'about', title: 'About' },
     { id: 'education', title: 'Education' },
     { id: 'experience', title: 'Experience' },
     { id: 'projects', title: 'Projects' },
@@ -14,19 +14,9 @@ export const navLinks: NavLink[] = [
     { id: 'contact', title: 'Contact' },
 ];
 
-export const categorizedSkills = [
-  {
-    category: 'Programming Languages',
-    skills: ['Python', 'TypeScript', 'C'],
-  },
-  {
-    category: 'Platforms',
-    skills: ['Firebase', 'Google AI Studio', 'TinkerCAD', 'Canva' , 'Supabase' , , 'Git & GitHub'],
-  },
-    {
-    category: 'Extras',
-    skills: ['AI & Data Engineering', 'Software Architecture', 'Prompt Design'],
-  },
+export const skills: string[] = [
+    'C', 'AI & Data Engineering', 'Software Architecture', 'Firebase', 'Canva',
+    'Google AI', 'Prompt Design', 'TinkerCAD', 'Git & GitHub', 'Python', 'TypeScript'
 ];
 
 export const projects: Project[] = [
@@ -200,9 +190,8 @@ export const certifications: Certification[] = [
 export const keyCourses: string[] = [
     'Introduction to C Programming',
     'Data Structures & Algorithms',
-    'Mathematical Foundation for AI & Data Engineering',
+    'Fundamentals of AI & Data Engineering',
     'Software Architecture Basics',
-    'Foundation of Computer Systems',
+    'FO',
     'Calculus & Linear Algebra',
-    'Differential Equations',
 ];
