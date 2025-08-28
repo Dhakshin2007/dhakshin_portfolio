@@ -113,21 +113,6 @@ export const education: Experience[] = [
 ];
 
 export const experience: Experience[] = [
-     {
-        date: 'Aug 2025 - Present',
-        title: 'Campus Partner',
-        company: 'Perplexity',
-        description: 'Collaborating with Perplexity to enhance campus engagement and promote innovative solutions.',
-        icon: React.createElement(BriefcaseIcon)
-    },
-    {
-        date: 'Jul 2024 - Present',
-        title: 'Volunteer',
-        company: 'National Service Scheme',
-        description: 'Engaging in community service and various social welfare activities as part of the NSS unit at IIT Ropar.',
-        icon: React.createElement(BriefcaseIcon)
-    },
-    
     {
         date: 'Jan 2025 - Apr 2025',
         title: 'Public Relations Volunteer',
@@ -149,8 +134,23 @@ export const experience: Experience[] = [
         description: 'Responsible for creating and editing visual content for the association.',
         icon: React.createElement(BriefcaseIcon)
     },
+    {
+        date: 'Jul 2024 - Present',
+        title: 'Volunteer',
+        company: 'National Service Scheme',
+        description: 'Engaging in community service and various social welfare activities as part of the NSS unit at IIT Ropar.',
+        icon: React.createElement(BriefcaseIcon)
+    },
+  
 
-];
+const campusPartner = {
+  date: 'Aug 2025 - Present',
+  title: 'Campus Partner',
+  company: 'Perplexity',
+  description: 'Collaborating with Perplexity to enhance campus engagement and promote innovative solutions.',
+  icon: <img src={PerplexityLogo} alt="Perplexity Logo" style={{ width: '24px', height: '24px' }} />
+};
+
 
 export const languages: Language[] = [
     { name: 'Telugu', proficiency: 'Native or bilingual proficiency' },

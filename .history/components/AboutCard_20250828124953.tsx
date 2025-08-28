@@ -109,7 +109,7 @@ export const AboutCard: React.FC = () => {
                             <p className="text-gray-300 leading-relaxed text-base">
                                 I'm a Second year B.Tech student in Artificial Intelligence and Data Engineering at IIT Ropar. My passion lies in software architecture and building robust, production-level systems. I have hands-on experience in circuit design and a proven ability to develop practical applications. I am always eager to tackle real-world challenges and innovate with technology.
                             </p>
-                            <p className="text-center text-xs text-cyan-400 mt-6 animate-pulse">Flip It Dude !!</p>
+                            <p className="text-center text-xs text-cyan-400 mt-6 animate-pulse">Flip It Dude </p>
                         </div>
                     </div>
                 </div>

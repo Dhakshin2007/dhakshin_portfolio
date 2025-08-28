@@ -113,13 +113,6 @@ export const education: Experience[] = [
 ];
 
 export const experience: Experience[] = [
-     {
-        date: 'Aug 2025 - Present',
-        title: 'Campus Partner',
-        company: 'Perplexity',
-        description: 'Collaborating with Perplexity to enhance campus engagement and promote innovative solutions.',
-        icon: React.createElement(BriefcaseIcon)
-    },
     {
         date: 'Jul 2024 - Present',
         title: 'Volunteer',

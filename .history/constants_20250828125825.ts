@@ -2,6 +2,7 @@ import React from 'react';
 import { Project, Experience, NavLink, Language, Certification } from './types';
 import { BriefcaseIcon, GraduationCapIcon } from './components/IconComponents';
 import { hpLifeLogo, googleCloudLogo, tcsIonLogo, anthropicLogo, awsLogo } from './assets/logo.ts';
+import pplxlogo from './assets/pplx.jpg';
 
 export const navLinks: NavLink[] = [
     { id: 'home', title: 'Home' },
@@ -113,21 +114,6 @@ export const education: Experience[] = [
 ];
 
 export const experience: Experience[] = [
-     {
-        date: 'Aug 2025 - Present',
-        title: 'Campus Partner',
-        company: 'Perplexity',
-        description: 'Collaborating with Perplexity to enhance campus engagement and promote innovative solutions.',
-        icon: React.createElement(BriefcaseIcon)
-    },
-    {
-        date: 'Jul 2024 - Present',
-        title: 'Volunteer',
-        company: 'National Service Scheme',
-        description: 'Engaging in community service and various social welfare activities as part of the NSS unit at IIT Ropar.',
-        icon: React.createElement(BriefcaseIcon)
-    },
-    
     {
         date: 'Jan 2025 - Apr 2025',
         title: 'Public Relations Volunteer',
@@ -149,7 +135,22 @@ export const experience: Experience[] = [
         description: 'Responsible for creating and editing visual content for the association.',
         icon: React.createElement(BriefcaseIcon)
     },
+    {
+        date: 'Jul 2024 - Present',
+        title: 'Volunteer',
+        company: 'National Service Scheme',
+        description: 'Engaging in community service and various social welfare activities as part of the NSS unit at IIT Ropar.',
+        icon: React.createElement(BriefcaseIcon)
+    },
+    {
+        date: 'Aug 2025 - Present',
+        title: 'Campus Partner',
+        company: 'Perplexity',
+        description: 'Collaborating with Perplexity to enhance campus engagement and promote innovative solutions.',
+        // icon: React.createElement(BriefcaseIcon)
+        icon: React.createElement('./pplx.png', { src: pplxlogo, alt: 'Perplexity Logo', style: { width: '24px', height: '24px' } })
 
+    }
 ];
 
 export const languages: Language[] = [
