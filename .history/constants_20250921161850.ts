@@ -160,13 +160,13 @@ export const languages: Language[] = [
 
 export const certifications: Certification[] = [
       {
-        title: 'GFG 160 Days of Code',
-        issuer: 'GeeksForGeeks',
-        date: 'Issued Sep 2025',
-        credentialUrl: 'https://media.geeksforgeeks.org/courses/certificates/8fff8db26a0827d6edabff113a3139da.pdf',
-        description: 'Completed 160 days of coding challenge on GeeksForGeeks, solving problems across various topics in Data Structures and Algorithms.',
-        skills: ['C', 'Python' , 'Data Structures', 'Algorithms' , 'Java'],
-        logo: GfgLogo,
+        title: 'Data Science & Analytics',
+        issuer: 'HP LIFE',
+        date: 'Issued Dec 2024',
+        credentialUrl: 'https://www.life-global.org/certificate/12c5dcc9-affc-4127-817a-45eabd0ffdc1',
+        description: 'Learned foundational concepts in data science, including data analysis, visualization, and interpretation.',
+        skills: ['Data Science', 'Analytics'],
+        logo: hpLifeLogo,
     },
     {
         title: 'Data Science & Analytics',

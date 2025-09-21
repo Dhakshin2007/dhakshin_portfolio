@@ -164,8 +164,8 @@ export const certifications: Certification[] = [
         issuer: 'GeeksForGeeks',
         date: 'Issued Sep 2025',
         credentialUrl: 'https://media.geeksforgeeks.org/courses/certificates/8fff8db26a0827d6edabff113a3139da.pdf',
-        description: 'Completed 160 days of coding challenge on GeeksForGeeks, solving problems across various topics in Data Structures and Algorithms.',
-        skills: ['C', 'Python' , 'Data Structures', 'Algorithms' , 'Java'],
+        description: '',
+        skills: ['Data Science', 'Analytics'],
         logo: GfgLogo,
     },
     {
