@@ -8,7 +8,7 @@
       "type": "image/png"
     },
     {
-      "src": "./DK_Logo_512x512.png",
+      "src": "/Dk_Logo_512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
