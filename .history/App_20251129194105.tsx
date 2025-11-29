@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Header } from './components/Header';
 import { AnimatedCursor } from './components/AnimatedCursor';
@@ -316,10 +317,11 @@ const App: React.FC = () => {
                     <a href="https://github.com/Dhakshin2007" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125" title="GitHub"><GitHubIcon /></a>
                     <a href="https://linkedin.com/in/dhakshinkotha" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125" title="LinkedIn"><LinkedInIcon /></a>
                     <a href="mailto:2024aib1009@iitrpr.ac.in" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125" title="Email"><MailIcon /></a>
+                    
                     <a href="https://monkeytype.com/profile/mr_dk_24" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125" title="MonkeyType"><MonkeyTypeIcon /></a>
                     <a href="https://www.geeksforgeeks.org/profile/kothadhakiw15" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125" title="GeeksforGeeks"><GFGIcon /></a>
                     <a href="https://leetcode.com/u/Dhakshin_K/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125" title="LeetCode"><LeetCodeIcon /></a>
-                    <a href="https://x.com/Dhakshin2007" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125" title="X (Twitter)"><XIcon /></a>
+                    <a href="https://x.com/Dhakshin2007" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125" title="X"><XIcon /></a>
                     <a href="https://instagram.com/mr_dhakshin__" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-125" title="Instagram"><InstagramIcon /></a>
                 </div>
                 <p className="text-gray-500">&copy; {new Date().getFullYear()} Dhakshin Kotha. All rights reserved.</p>

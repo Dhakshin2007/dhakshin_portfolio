@@ -25,11 +25,11 @@ export const categorizedSkills = [
     },
     {
         category: 'Platforms',
-        skills: ['Firebase', 'Google AI Studio', 'TinkerCAD', 'Canva', 'Supabase', 'Git & GitHub','MongoDB' , 'Vertex AI', 'Kaggle' , 'Google AntiGravity' , 'Google Colab'],
+        skills: ['Firebase', 'Google AI Studio', 'TinkerCAD', 'Canva', 'Supabase', 'Git & GitHub','MongoDB' , 'Vertex AI', 'Kaggle'],
     },
     {
         category: 'Extras',
-        skills: ['AI & Data Engineering', 'Software Architecture', 'Prompt Design' , 'System Design' , 'Data Structures & Algorithms' , 'Linear Algebra' , 'Calculus'],
+        skills: ['AI & Data Engineering', 'Software Architecture', 'Prompt Design' , 'System Design' , 'Data Structures & Algorithms''],
     },
 ];
 
