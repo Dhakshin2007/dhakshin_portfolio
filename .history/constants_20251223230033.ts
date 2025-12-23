@@ -36,11 +36,11 @@ export const categorizedSkills = [
 export const projects: Project[] = [
     {
         title: 'TradeoBull - Stock Trading Platform',
-        description: 'A comprehensive stock trading platform that allows users to buy, sell, and manage their stock portfolios with real-time market data and analytics. Built using ReactJS and Supabase for seamless user experience and data management.',
+        description: 'A comprehensive stock trading platform that allows users to buy, sell, and manage their stock portfolios with real-time market data and analytics. Built using ReactJS and Firebase for seamless user experience and data management.',
         image: './assets/TradeoBull.png',
-        tags: ['ReactJS', 'Supabase', 'Google AI', 'Finance' , 'Stock Trading' , 'Analytics' , 'Real-time Data'],
-        liveUrl: 'https://tradeobull.vercel.app/',
-        codeUrl: 'https://github.com/Dhakshin2007/tradeobull',
+        tags: ['ReactJS', 'Firebase', 'Google AI', 'BLE'],
+        liveUrl: 'https://blepay.vercel.app/',
+        codeUrl: 'https://github.com/Dhakshin2007/Tapless_Pay',
     },
     {
         title: 'BLEPay — Gesture & BLE Payments',
@@ -59,28 +59,12 @@ export const projects: Project[] = [
         codeUrl: '#',
     },
     {
-        title: 'FusionBowl - Fruit Selling Website',
-        description: 'Designed and redacted visual content for the Telugu Culture Association at IIT Ropar, enhancing public engagement through creative graphics using Canva. Website showcases the association\'s activities and events.',
-        image: 'https://i.postimg.cc/SxPbst4r/Fusion-Bowl-PNG-(Bg-removed).png',
-        tags: ['ReactJS', 'Graphic Design', 'Fruit Design', 'FreeLance', 'WebDevelopment'],
-        liveUrl: 'https://fusionbowl.vercel.app/',
-        codeUrl: 'https://github.com/Dhakshin2007/FusionBowl',
-    },
-    {
         title: 'TCA Website',
         description: 'Designed and redacted visual content for the Telugu Culture Association at IIT Ropar, enhancing public engagement through creative graphics using Canva. Website showcases the association\'s activities and events.',
         image: 'https://picsum.photos/seed/tca/600/400',
         tags: ['Canva', 'Graphic Design', 'Public Relations', 'IIT Ropar', 'WebDevelopment'],
         liveUrl: 'https://tcaiitrpr.vercel.app/',
         codeUrl: 'https://github.com/Dhakshin2007/tca_website/tree/main',
-    },
-    {
-        title: 'Pulpy Orange - Advertising Campaign',
-        description: 'A promotional campaign website for Coco-Cola\'s Pulpy Orange drink, created using ReactJS and TypeScript. The site features engaging visuals and interactive elements to attract customers and boost brand awareness.',
-        image: 'https://webtntlprd.blob.core.windows.net/content/1751962133042-Minute_Maid%20Pulpy-EN.webp',
-        tags: ['ReactJS', 'TypeScript', 'Advertising', 'Coco-Cola','Promotional Campaign'],
-        liveUrl: 'https://pulpyorange.vercel.app',
-        codeUrl: 'https://github.com/Dhakshin2007/pulpyorange',
     },
     {
         title: 'Whatsapp Web Lock Extension',
@@ -142,7 +126,7 @@ export const education: Experience[] = [
 
 export const experience: Experience[] = [
      {
-        date: 'Aug 2025 - Nov 2025',
+        date: 'Aug 2025 - Present',
         title: 'Campus Partner',
         company: 'Perplexity',
         description: 'Collaborating with Perplexity to enhance campus engagement and promote innovative solutions.',
@@ -187,24 +171,6 @@ export const languages: Language[] = [
 ];
 
 export const certifications: Certification[] = [
-      {
-        title: 'GFG System Design',
-        issuer: 'GeeksForGeeks',
-        date: 'Issued Dec 2025',
-        credentialUrl: 'https://www.geeksforgeeks.org/certificate/3d385f47dab2b1b1e7b1e5cf18174bad',
-        description: 'Completed the System Design course on GeeksForGeeks, gaining knowledge in designing scalable and efficient software systems.',
-        skills: ['System Design', 'Scalability', 'Software Architecture'],
-        logo: GfgLogo,
-    },
-      {
-        title: 'GFG Linux',
-        issuer: 'GeeksForGeeks',
-        date: 'Issued Dec 2025',
-        credentialUrl: 'https://www.geeksforgeeks.org/certificate/ff0089a6e512d2f96e35f4b79b529794',
-        description: 'Completed the Linux course on GeeksForGeeks, acquiring skills in Linux command line, file management, and system administration.',
-        skills: ['Linux', 'Command Line', 'File Management', 'System Administration'],
-        logo: GfgLogo,
-    },
       {
         title: 'GFG 160 Days of Code',
         issuer: 'GeeksForGeeks',

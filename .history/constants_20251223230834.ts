@@ -202,7 +202,7 @@ export const certifications: Certification[] = [
         date: 'Issued Dec 2025',
         credentialUrl: 'https://www.geeksforgeeks.org/certificate/ff0089a6e512d2f96e35f4b79b529794',
         description: 'Completed the Linux course on GeeksForGeeks, acquiring skills in Linux command line, file management, and system administration.',
-        skills: ['Linux', 'Command Line', 'File Management', 'System Administration'],
+        skills: ['C', 'Python' , 'Data Structures', 'Algorithms' , 'Java'],
         logo: GfgLogo,
     },
       {

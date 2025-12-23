@@ -200,9 +200,9 @@ export const certifications: Certification[] = [
         title: 'GFG Linux',
         issuer: 'GeeksForGeeks',
         date: 'Issued Dec 2025',
-        credentialUrl: 'https://www.geeksforgeeks.org/certificate/ff0089a6e512d2f96e35f4b79b529794',
-        description: 'Completed the Linux course on GeeksForGeeks, acquiring skills in Linux command line, file management, and system administration.',
-        skills: ['Linux', 'Command Line', 'File Management', 'System Administration'],
+        credentialUrl: 'https://media.geeksforgeeks.org/courses/certificates/8fff8db26a0827d6edabff113a3139da.pdf',
+        description: 'Completed 160 days of coding challenge on GeeksForGeeks, solving problems across various topics in Data Structures and Algorithms.',
+        skills: ['C', 'Python' , 'Data Structures', 'Algorithms' , 'Java'],
         logo: GfgLogo,
     },
       {

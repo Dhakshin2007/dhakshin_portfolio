@@ -188,24 +188,6 @@ export const languages: Language[] = [
 
 export const certifications: Certification[] = [
       {
-        title: 'GFG System Design',
-        issuer: 'GeeksForGeeks',
-        date: 'Issued Dec 2025',
-        credentialUrl: 'https://www.geeksforgeeks.org/certificate/3d385f47dab2b1b1e7b1e5cf18174bad',
-        description: 'Completed the System Design course on GeeksForGeeks, gaining knowledge in designing scalable and efficient software systems.',
-        skills: ['System Design', 'Scalability', 'Software Architecture'],
-        logo: GfgLogo,
-    },
-      {
-        title: 'GFG Linux',
-        issuer: 'GeeksForGeeks',
-        date: 'Issued Dec 2025',
-        credentialUrl: 'https://www.geeksforgeeks.org/certificate/ff0089a6e512d2f96e35f4b79b529794',
-        description: 'Completed the Linux course on GeeksForGeeks, acquiring skills in Linux command line, file management, and system administration.',
-        skills: ['Linux', 'Command Line', 'File Management', 'System Administration'],
-        logo: GfgLogo,
-    },
-      {
         title: 'GFG 160 Days of Code',
         issuer: 'GeeksForGeeks',
         date: 'Issued Sep 2025',
