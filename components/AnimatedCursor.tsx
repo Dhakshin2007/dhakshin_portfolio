@@ -32,14 +32,14 @@ export const AnimatedCursor: React.FC = () => {
     return (
         <>
             <div
-                className={`fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-cyan-400 transition-transform duration-300 ease-out pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 ${isPointer ? 'scale-150' : ''}`}
+                className={`fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-cyan-400 transition-transform duration-300 ease-out pointer-events-none z-[9999] transform -translate-x-1/2 -translate-y-1/2 ${isPointer ? 'scale-150' : ''}`}
                 style={{
                     left: `${x}px`,
                     top: `${y}px`,
                 }}
             ></div>
             <div
-                className={`fixed top-0 left-0 w-2 h-2 rounded-full bg-cyan-400 pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 ${isPointer ? 'opacity-0' : 'opacity-100'}`}
+                className={`fixed top-0 left-0 w-2 h-2 rounded-full bg-cyan-400 pointer-events-none z-[9999] transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 ${isPointer ? 'opacity-0' : 'opacity-100'}`}
                 style={{
                     left: `${x}px`,
                     top: `${y}px`,

@@ -15,7 +15,6 @@ import { GitHubIcon, LinkedInIcon, MailIcon, LinkIcon, CodeIcon, CloseIcon, Monk
 import { MeteorBackground } from './components/MeteorBackground';
 import { CelestialBackground } from './components/CelestialBackground';
 import { MatrixRain } from './components/MatrixRain';
-import { CyberRunnerGame } from './components/CyberRunnerGame';
 import { SpotifyPlayer } from './components/SpotifyPlayer';
 import { AboutCard } from './components/AboutCard.tsx';
 
@@ -279,15 +278,6 @@ const App: React.FC = () => {
                             </div>
                         </div>
 
-                    </div>
-                </Section>
-
-                {/* Game Section */}
-                <Section id="game">
-                    <MatrixRain />
-                    <div className="relative z-10">
-                        <h2 className="text-4xl font-bold font-orbitron text-center mb-12 magenta-glow">Cyber Runner</h2>
-                        <CyberRunnerGame />
                     </div>
                 </Section>
 

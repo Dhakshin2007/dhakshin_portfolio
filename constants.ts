@@ -10,7 +10,6 @@ export const navLinks: NavLink[] = [
     { id: 'experience', title: 'Experience' },
     { id: 'projects', title: 'Projects' },
     { id: 'extras', title: 'Extras' },
-    { id: 'game', title: 'Game' },
     { id: 'contact', title: 'Contact' },
 ];
 
